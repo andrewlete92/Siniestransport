@@ -1,8 +1,38 @@
-.footer1{
-	background: #666;
-	padding: 15px
+#footer1{
+	margin:0px;
+    width: 100%;
+    height: 300px;
+    border: none;
+    padding: 0px;
 }
 
+#Menu{
+    margin: 0px;
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+
+#content{
+    margin: 0px;
+    width: 100%;
+    border: none;
+    padding: none;
+}
+
+.submenu{
+    background-color: #292c2f;
+    position: absolute;
+}
+
+.submenu > a{
+    display: block;
+    color:#fff;
+}
+.changePass{
+    margin: 0px;
+    height: 200px;
+}
 .buttonc{
 	padding: 5px;
 	width: 100px;
