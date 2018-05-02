@@ -4,11 +4,11 @@
     height: 300px;
     border: none;
     padding: 0px;
+    z-index: 0;
 }
 
 #Menu{
     margin: 0px;
-    border: none;
     width: 100%;
     height: 100%;
 }
@@ -22,12 +22,14 @@
 
 .submenu{
     background-color: #292c2f;
-    position: absolute;
+    
 }
 
 .submenu > a{
     display: block;
     color:#fff;
+    position: relative;
+
 }
 .changePass{
     margin: 0px;

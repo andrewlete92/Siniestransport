@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+      html { height: 100% }
+      body { height: 100%; margin: 0; padding: 0 }
+      #mapa { height: 100%}
+	  
+   }
+    </style>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=visualization&callback=initMap"></script>
+    <script type="text/javascript">
+          var map;
+          var marcadores = [
+
+['Placa: TRN338Fecha: 26/11/2017 6:26 Evento: Varado Vel: 34 km/h ',5.794570,-75.303910,'Varado'],
+['Placa: TRN338Fecha: 26/11/2017 6:26 Evento: Varado Vel: 26 km/h ',5.794510,-75.303980,'Varado'],
+['Placa: TRN338Fecha: 26/11/2017 6:29 Evento: Varado Vel: 34 km/h ',5.786980,-75.308970,'Varado'],
+['Placa: TRN338Fecha: 26/11/2017 6:31 Evento: Choque Vel: 37 km/h ',5.782760,-75.310080,'Choque'],
+['Placa: TRN338Fecha: 26/11/2017 6:31 Evento: Varado Vel: 30 km/h ',5.782780,-75.309950,'Varado'],
+['Placa: TRN338Fecha: 26/11/2017 6:31 Evento: Varado Vel: 40 km/h ',5.782800,-75.309870,'Varado'],
+['Placa: TRN338Fecha: 26/11/2017 6:31 Evento: Varado Vel: 33 km/h ',5.782540,-75.309500,'Varado'],
+['Placa: TRN338Fecha: 26/11/2017 6:31 Evento: Varado Vel: 39 km/h ',5.782660,-75.309440,'Varado'],
+['Placa: TRN338Fecha: 26/11/2017 6:32 Evento: Varado Vel: 35 km/h ',5.779240,-75.310140,'Varado'],
+['Placa: TRN371Fecha: 26/11/2017 6:33 Evento: Varado Vel: 24 km/h ',6.265890,-75.574770,'Varado'],
+['Placa: TRN371Fecha: 26/11/2017 6:33 Evento: Varado Vel: 30 km/h ',6.265980,-75.574740,'Varado'],
+['Placa: TRN336Fecha: 26/11/2017 6:36 Evento: Varado Vel: 32 km/h ',6.079000,-75.980410,'Varado'],
+['Placa: TRN336Fecha: 26/11/2017 6:36 Evento: Varado Vel: 32 km/h ',6.079000,-75.980410,'Varado'],
+['Placa: TRN336Fecha: 26/11/2017 6:36 Evento: Varado Vel: 37 km/h ',6.078470,-75.979110,'Varado'],
+['Placa: TRN371Fecha: 26/11/2017 6:36 Evento:Choque Vel: 61 km/h ',6.290640,-75.568760,'Choque'],
+['Placa: TRN338Fecha: 26/11/2017 6:36 Evento: Varado Vel: 31 km/h ',5.772320,-75.293770,'Varado'],
+['Placa: TRN337Fecha: 26/11/2017 6:37 Evento: Varado Vel: 20 km/h ',6.265800,-75.574800,'Varado'],
+['Placa: TRN337Fecha: 26/11/2017 6:39 Evento: Varado Vel: 61 km/h ',6.275970,-75.572510,'Varado'],
+['Placa: TRJ713Fecha: 26/11/2017 6:39 Evento: Varado Vel: 23 km/h ',6.175360,-75.595190,'Varado'],
+['Placa: TRJ713Fecha: 26/11/2017 6:42 Evento:Choque Vel: 66 km/h ',6.193210,-75.581920,'Choque'],
+['Placa: TRN336Fecha: 26/11/2017 6:42 Evento: Choque Vel: 18 km/h ',6.088230,-75.980700,'Choque'],
+['Placa: TRN371Fecha: 26/11/2017 6:43 Evento:Choque Vel: 74 km/h ',6.337970,-75.543020,'Choque'],
+['Placa: TRJ713Fecha: 26/11/2017 6:44 Evento:Choque Vel: 66 km/h ',6.210800,-75.578070,'Choque'],
+['Placa: TRN337Fecha: 26/11/2017 6:45 Evento: Varado Vel: 36 km/h ',6.313650,-75.556550,'Varado'],
+['Placa: TRN371Fecha: 26/11/2017 6:46 Evento:Choque Vel: 71 km/h ',6.344930,-75.527500,'Choque'],
+['Placa: TRJ713Fecha: 26/11/2017 7:00 Evento: Varado Vel: 33 km/h ',6.313670,-75.556760,'Varado'],
+['Placa: TRN445Fecha: 26/11/2017 7:09 Evento: Varado Vel: 24 km/h ',5.857980,-75.773790,'Varado'],
+['Placa: TRJ713Fecha: 26/11/2017 7:11 Evento:Choque Vel: 66 km/h ',6.360250,-75.497080,'Choque'],
+['Placa: TRN337Fecha: 26/11/2017 7:12 Evento:Choque Vel: 64 km/h ',6.360770,-75.495910,'Choque'],
+['Placa: TRN252Fecha: 26/11/2017 7:14 Evento: Varado Vel: 29 km/h ',6.417560,-75.391400,'Varado'],
+['Placa: TRN445Fecha: 26/11/2017 7:14 Evento: Varado Vel: 27 km/h ',5.855030,-75.784020,'Varado'],
+['Placa: TRN445Fecha: 26/11/2017 7:15 Evento: Varado Vel: 29 km/h ',5.855220,-75.786070,'Varado'],
+['Placa: TRJ713Fecha: 26/11/2017 7:16 Evento: Varado Vel: 51 km/h ',6.383240,-75.467510,'Varado'],
+['Placa: TRN337Fecha: 26/11/2017 7:18 Evento: Varado Vel: 61 km/h ',6.385530,-75.454040,'Varado'],
+['Placa: TRJ713Fecha: 26/11/2017 7:20 Evento: Varado Vel: 58 km/h ',6.394160,-75.441040,'Varado'],
+['Placa: TRJ713Fecha: 26/11/2017 7:27 Evento: Choque Vel: 37 km/h ',6.416290,-75.393740,'Choque'],
+['Placa: TRN445Fecha: 26/11/2017 7:25 Evento: Varado Vel: 26 km/h ',5.827240,-75.792520,'Varado'],
+['Placa: TRN445Fecha: 26/11/2017 7:26 Evento: Varado Vel: 31 km/h ',5.824320,-75.791620,'Varado'],
+['Placa: TRN445Fecha: 26/11/2017 7:28 Evento: Varado Vel: 26 km/h ',5.820100,-75.794250,'Varado'],
+['Placa: TRN445Fecha: 26/11/2017 7:26 Evento: Varado Vel: 31 km/h ',5.824320,-75.791620,'Varado'],
+['Placa: TRN445Fecha: 26/11/2017 7:29 Evento: Varado Vel: 26 km/h ',5.820270,-75.794770,'Varado'],
+['Placa: TRN445Fecha: 26/11/2017 7:29 Evento: Varado Vel: 21 km/h ',5.820340,-75.794750,'Varado'],
+['Placa: TRN445Fecha: 26/11/2017 7:29 Evento: Varado Vel: 26 km/h ',5.820270,-75.794770,'Varado'],
+['Placa: TRN445Fecha: 26/11/2017 7:29 Evento: Varado Vel: 29 km/h ',5.819340,-75.795090,'Varado'],
+['Placa: TRN445Fecha: 26/11/2017 7:28 Evento: Varado Vel: 26 km/h ',5.820100,-75.794250,'Varado'],
+['Placa: TRN445Fecha: 26/11/2017 7:29 Evento: Varado Vel: 21 km/h ',5.820340,-75.794750,'Varado'],
+['Placa: TRN445Fecha: 26/11/2017 7:29 Evento: Varado Vel: 26 km/h ',5.820270,-75.794770,'Varado'],
+['Placa: TRN445Fecha: 26/11/2017 7:30 Evento: Varado Vel: 19 km/h ',5.816740,-75.796980,'Varado'],
+['Placa: TRN445Fecha: 26/11/2017 7:30 Evento: Choque Vel: 19 km/h ',5.816820,-75.796920,'Choque'],
+['Placa: TRN445Fecha: 26/11/2017 7:30 Evento: Varado Vel: 39 km/h ',5.815400,-75.797120,'Varado'],
+['Placa: TRN445Fecha: 26/11/2017 7:30 Evento: Varado Vel: 25 km/h ',5.814300,-75.797920,'Varado'],
+['Placa: TRN252Fecha: 26/11/2017 7:31 Evento: Varado Vel: 31 km/h ',6.445060,-75.361580,'Varado'],
+['Placa: TRN445Fecha: 26/11/2017 7:32 Evento: Varado Vel: 22 km/h ',5.813310,-75.791700,'Choque'],
+['Placa: TRN445Fecha: 26/11/2017 7:33 Evento: Varado Vel: 33 km/h ',5.812950,-75.789920,'Varado'],
+['Placa: TRN252Fecha: 26/11/2017 7:34 Evento: Choque Vel: 23 km/h ',6.448970,-75.361220,'Choque'],
+['Placa: TRJ713Fecha: 26/11/2017 7:36 Evento: Varado Vel: 25 km/h ',6.426840,-75.371580,'Varado'],
+['Placa: TRN338Fecha: 26/11/2017 7:40 Evento: Varado Vel: 30 km/h ',5.771110,-75.292100,'Choque'],
+['Placa: TRN338Fecha: 26/11/2017 7:41 Evento: Varado Vel: 29 km/h ',5.773060,-75.295880,'Choque'],
+['Placa: TRN445Fecha: 26/11/2017 7:33 Evento: Varado Vel: 23 km/h ',5.813160,-75.788510,'Varado'],
+['Placa: TRN445Fecha: 26/11/2017 7:35 Evento: Varado Vel: 27 km/h ',5.812150,-75.787720,'Varado'],
+['Placa: TRN445Fecha: 26/11/2017 7:35 Evento: Varado Vel: 25 km/h ',5.812140,-75.787600,'Varado'],
+['Placa: TRN445Fecha: 26/11/2017 7:35 Evento: Varado Vel: 28 km/h ',5.812260,-75.787820,'Varado'],
+['Placa: TRN445Fecha: 26/11/2017 7:37 Evento: Varado Vel: 20 km/h ',5.814490,-75.783330,'Varado'],
+['Placa: TRN445Fecha: 26/11/2017 7:37 Evento: Varado Vel: 20 km/h ',5.814590,-75.783360,'Varado'],
+['Placa: TRN445Fecha: 26/11/2017 7:38 Evento: Varado Vel: 26 km/h ',5.813510,-75.785860,'Varado'],
+['Placa: TRN445Fecha: 26/11/2017 7:39 Evento: Varado Vel: 26 km/h ',5.813240,-75.782530,'Varado'],
+['Placa: TRN445Fecha: 26/11/2017 7:38 Evento: Varado Vel: 23 km/h ',5.812850,-75.784910,'Varado'],
+['Placa: TRN445Fecha: 26/11/2017 7:38 Evento: Choque Vel: 16 km/h ',5.813570,-75.785890,'Choque'],
+['Placa: TRN445Fecha: 26/11/2017 7:35 Evento: Varado Vel: 25 km/h ',5.812140,-75.787600,'Varado'],
+['Placa: TRN445Fecha: 26/11/2017 7:35 Evento: Varado Vel: 27 km/h ',5.812150,-75.787720,'Varado'],
+['Placa: TRN445Fecha: 26/11/2017 7:38 Evento: Varado Vel: 23 km/h ',5.812850,-75.784910,'Varado'],
+['Placa: TRN445Fecha: 26/11/2017 7:37 Evento: Varado Vel: 20 km/h ',5.814490,-75.783330,'Varado'],
+['Placa: TRN445Fecha: 26/11/2017 7:37 Evento: Varado Vel: 20 km/h ',5.814590,-75.783360,'Choque'],
+['Placa: TRN445Fecha: 26/11/2017 7:35 Evento: Varado Vel: 28 km/h ',5.812260,-75.787820,'Choque'],
+['Placa: TRN445Fecha: 26/11/2017 7:38 Evento: Varado Vel: 26 km/h ',5.813510,-75.785860,'Varado'],
+['Placa: TRN445Fecha: 26/11/2017 7:38 Evento: Choque Vel: 16 km/h ',5.813570,-75.785890,'Choque'],
+['Placa: TRN445Fecha: 26/11/2017 7:39 Evento: Varado Vel: 26 km/h ',5.813240,-75.782530,'Varado'],
+['Placa: TRN445Fecha: 26/11/2017 7:35 Evento: Varado Vel: 27 km/h ',5.812150,-75.787720,'Varado'],
+['Placa: TRN445Fecha: 26/11/2017 7:35 Evento: Varado Vel: 25 km/h ',5.812140,-75.787600,'Varado'],
+['Placa: TRN445Fecha: 26/11/2017 7:35 Evento: Varado Vel: 28 km/h ',5.812260,-75.787820,'Varado'],
+['Placa: TRN445Fecha: 26/11/2017 7:37 Evento: Varado Vel: 20 km/h ',5.814590,-75.783360,'Varado'],
+['Placa: TRN445Fecha: 26/11/2017 7:38 Evento: Varado Vel: 23 km/h ',5.812850,-75.784910,'Varado'],
+['Placa: TRN445Fecha: 26/11/2017 7:37 Evento: Varado Vel: 20 km/h ',5.814490,-75.783330,'Varado'],
+['Placa: TRN445Fecha: 26/11/2017 7:38 Evento: Choque Vel: 16 km/h ',5.813570,-75.785890,'Choque'],
+['Placa: TRN445Fecha: 26/11/2017 7:38 Evento: Varado Vel: 26 km/h ',5.813510,-75.785860,'Varado'],
+['Placa: TRN445Fecha: 26/11/2017 7:39 Evento: Varado Vel: 26 km/h ',5.813240,-75.782530,'Varado'],
+['Placa: TRN391Fecha: 26/11/2017 7:59 Evento:Choque Vel: 73 km/h ',6.383870,-75.465320,'Choque'],
+['Placa: TRM967Fecha: 26/11/2017 8:04 Evento:Choque Vel: 69 km/h ',6.363120,-75.493490,'Choque'],
+['Placa: TRN338Fecha: 26/11/2017 7:46 Evento: Varado Vel: 25 km/h ',5.782570,-75.309430,'Varado'],
+['Placa: TRN338Fecha: 26/11/2017 7:46 Evento: Varado Vel: 33 km/h ',5.782770,-75.309680,'Varado'],
+['Placa: TRN338Fecha: 26/11/2017 7:46 Evento: Choque Vel: 29 km/h ',5.782710,-75.309490,'Choque'],
+['Placa: TRN338Fecha: 26/11/2017 7:48 Evento: Varado Vel: 38 km/h ',5.788520,-75.309030,'Varado']
+
+          ];
+
+          // Define the LatLng coordinates for the polygon's path.
+          var PlygonCoords = [
+            {lat: 6.18116356243615,lng: -75.5917659401894},
+            {lat: 6.18120356167113,lng: -75.5922889709473},
+            {lat: 6.18218754189969,lng: -75.593133866787},
+            {lat: 6.18321951919722,lng: -75.5923157930374},
+            {lat: 6.18285686073816,lng: -75.5918624997138},
+            {lat: 6.18263553229169,lng: -75.5919322371483},
+            {lat: 6.18188354820333,lng: -75.5908942222595},
+            {lat: 6.18142689067761,lng: -75.5911959707736},
+            {lat: 6.18127156036368,lng: -75.5910551548004}
+
+          ];
+          var BoteroSoto = new google.maps.Polygon({
+            paths: PlygonCoords,
+            strokeColor: '#013ADF',
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: '#5882FA',
+            fillOpacity: 0.35,
+            visible: false
+          });
+
+          var infoWindow = new google.maps.InfoWindow();
+          var customIcons = {
+              Varado: {icon: 'img/Varado.png'},
+              Choque:{icon: 'img/Choque.png'}
+            };     
+          var markerGroups = {
+              "Varado": [],
+              "Choque": []
+            };
+
+      function load(){
+        var mapa = new google.maps.Map(document.getElementById('mapa'), {
+        zoom: 10,
+        center: new google.maps.LatLng(6.24305, -75.58787),
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        gestureHandling: 'greedy'
+        });
+        var infoWindow = new google.maps.InfoWindow();
+        map = mapa;
+          for (var i = 0; i<marcadores.length; i++) {
+          var data = marcadores[i][0];
+          var type = marcadores[i][3];
+          var pos = new google.maps.LatLng(marcadores[i][1], marcadores[i][2]);
+          var marker = createMarker(pos, name, type, map);
+          bindInfoWindow(marker, map, infoWindow, data);
+          console.log(markerGroups);
+          }
+      }
+
+      function createMarker(pos, name, type, map) {
+        var icon = customIcons[type];
+        var marker = new google.maps.Marker({
+            map: map,
+            position: pos,
+            icon: icon.icon,
+            // shadow: icon.shadow,
+            type: type
+        });
+        markerGroups[type].push(marker);
+        return marker;
+      }
+
+      function bindInfoWindow(marker, map, infoWindow, data) {
+        google.maps.event.addListener(marker, 'click', function() {
+            infoWindow.setContent(data);
+            infoWindow.open(map, marker);
+          });
+      }
+
+      function showItem(type) {
+        for (var i = 0; i < markerGroups[type].length; i++) {
+        var marker = markerGroups[type][i];
+            if (!marker.getVisible()) {
+                marker.setVisible(true);
+            } else {
+                marker.setVisible(false);
+            }
+        }
+      }
+
+      function showPolygon(){
+        if(BoteroSoto.getVisible()==false){
+          BoteroSoto.setVisible(true);
+          BoteroSoto.setMap(map);
+        } else {
+          BoteroSoto.setVisible(false);
+          BoteroSoto.setMap(null);
+        }       
+      }
+    google.maps.event.addDomListener(window, 'load', load);
+    
+  </script>
+  </head>
+  <body>
+        <div id="mapa"></div>       
+  </body>
+</html>

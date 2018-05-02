@@ -31,3 +31,12 @@
 
 </body>
 </html>
+
+<script>
+	window.addEventListener("message",receiveMessage,false);
+	function receiveMessage(event){
+		var page = event.data;
+		console.log(page);	
+		$("#content").load("Change_Pass.html");
+	}
+</script>
