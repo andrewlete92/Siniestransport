@@ -1,0 +1,223 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"w",
+				"width"
+			],
+			[
+				"bo",
+				"border"
+			],
+			[
+				"h",
+				"height"
+			],
+			[
+				"al",
+				"alt\tAttr"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 358.0,
+		"last_filter": "Package Control: ",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 412.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/us/Desktop/index_java.html",
+		"/C/xampp/htdocs/banco/taller_banco.php",
+		"/C/Users/us/Desktop/ConsignR.html",
+		"/C/xampp/htdocs/banco/Retirar.html",
+		"/C/xampp/htdocs/banco/Banco.html",
+		"/C/xampp/htdocs/banco/Banco.php",
+		"/C/xampp/htdocs/banco/Bank.html",
+		"/C/Users/us/Desktop/index_banco.html",
+		"/C/Users/us/Desktop/banco/taller_banco.php",
+		"/C/Users/us/Desktop/index.html",
+		"/C/Users/us/Desktop/Parcial/Index.html",
+		"/C/Users/us/Desktop/Parcial/Tornillos.php",
+		"/C/Users/us/Desktop/Momentos.html",
+		"/C/Users/us/Desktop/web de amor/CSS/Style.css",
+		"/C/Users/us/Desktop/trabajos/taller casa/index.html",
+		"/C/xampp/htdocs/Edad/edad.php",
+		"/C/xampp/htdocs/Taller 3/Productos.php",
+		"/C/xampp/htdocs/Taller 3/taller3.html",
+		"/C/Users/us/Desktop/edad.htkl.html",
+		"/C/Users/us/Desktop/Taller 3/Productos.php",
+		"/C/Users/us/Desktop/Edad/edad.php",
+		"/C/Users/us/Desktop/Taller 3/papas.jpg",
+		"/C/Users/us/Desktop/Formulario/Index.html",
+		"/C/xampp/htdocs/minimercado/index.html",
+		"/C/Users/us/Desktop/Formulario/Calificaciones.php",
+		"/C/Users/us/Documents/minimercado/CSS/Style.css",
+		"/C/Users/us/Documents/minimercado/index.html",
+		"/C/Users/us/Documents/minimercado/resultado.php",
+		"/C/Users/us/Desktop/trabajo en clase/index.html",
+		"/C/Users/us/Desktop/trabajo en clase/CSS/bootstrap.css",
+		"/C/Users/us/Desktop/website/Formulario.html",
+		"/C/Users/us/Desktop/taller casa/index.html",
+		"/C/Users/us/Desktop/taller casa/CSS/Styles.css",
+		"/C/Users/us/Desktop/website/Listas.html",
+		"/C/Users/us/Desktop/website/Productos.html",
+		"/C/Users/us/Desktop/website/Clase 6.html",
+		"/C/Users/us/Desktop/website/Idex.html"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"\">\n",
+			"izquierda"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "Index.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
