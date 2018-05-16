@@ -3,17 +3,17 @@
 <head>
 	<meta charset="UTF-8">
 	<title>SignIn</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="../../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../css/style.css">
 </head>
 <body>
 	<div>
-		<img src="img/signin_banner.jpg" style="width: 100%; height: 100%">
+		<img src="../../img/signin_banner.jpg" style="width: 100%; height: 100%">
 	</div>
 <nav class="navbar navbar-expand-sm bg-light">
   	<ul class="navbar-nav">
 		 <li class="nav-item">
-      			<a class="nav-link" href="Index.html">Inicio</a>
+      			<a class="nav-link" href="Index.php">Inicio</a>
   		</li>
    		<li class="nav-item">
      			<a class="nav-link" href="Libros.php">Portafolio</a>

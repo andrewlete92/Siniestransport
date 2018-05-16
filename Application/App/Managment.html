@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Inicio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="../../js/Managment.js"></script>
+  <script src="../../js/login.js"></script>
+</head>
+<body>
+<div>
+	<img src="../../img/managment_banner.jpg" style="width: 100%; height: 100%">
+</div>
+<div class="row fondo">
+<div class="menul">
+  <nav id="menu">
+<ul>
+  <li><a href="Managment.html">Home</a></li>
+  <li><a href="#">INCIDENTES</a>
+    <ul>
+      <li><a id="report" href="#">Reportar</a></li>
+    </ul>
+  </li>
+  <li><a href="#">INFORMES</a>
+    <ul>
+      <li><a class="submenu" href="#">Tabla</a></li>
+      <li><a class="submenu" href="Mapa_Incidentes.html">Mapa Incidentes</a></li>
+      <li><a href="#">Mapa Calor</a></li>
+    </ul>
+  </li>
+  <li><a href="#">PERFIL</a>
+    <ul>
+      <li><a class="submenu" href="../Comun/ChangePass.html">Cambiar Clave</a></li>
+      <li><a href="#">Configuración</a></li>
+      <li><a class="submenu" id="logout" onclick="logout()" href="">Cerrar Sesión</a></li>
+    </ul>
+  </li>
+</ul>
+</nav>
+</div>
+</div>
+<div class="row container">
+  <section>
+  <div id="content">
+  
+  </div>
+  <div id="modal" role="dialog">
+      
+  </div>
+</section>  
+</div>
+
+<footer>
+	<iframe src="../Comun/Footer.html" id="footer1"></iframe>
+</footer>
+
+</body>
+</html>

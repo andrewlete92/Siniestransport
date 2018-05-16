@@ -1,0 +1,196 @@
+<html>
+<head>
+	   <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+     <link rel="stylesheet" href="../../../css/style.css">
+  	 <script src="../../../js/bootstrap.min.js"></script>
+     <script src="../../../js/jquery.js"></script>
+     <script src="../../js/Reportar.js"></script>
+</head>
+<body>
+<div class="modal fade modalpopup" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="false" id="ModalRegistro">
+  	<div class="modal-dialog modal-lg" role="document">
+    	<div class="" style="border: none" id="modal">
+			<div class="alert modalForm">
+  				<legend><h2 style="color: white;">Detalles del Accidente</h2></legend>
+          <h3>Diligencie los siguentes datos para determinar el tipo de accidente</h3>
+          <h6>Todos los datos seran verificados con la secretarìa de movilidad, por favor sea sincero en sus respuestas</h6>
+      <br>
+
+<form class="form-horizontal" id="formReport">
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="basicdetails_advertiser"><strong>Debidas al conductor</strong></label>
+  <div class="col-md-4">
+    <select id="CausaConductor" name="basicdetails_advertiser" class="form-control">
+      <option value="1">Exceso de velocidad</option>
+      <option value="2">Circular en sentido contrario</option>
+      <option value="3">Inexperiencia en el manejo</option>
+      <option value="4">Micro sueño mientras conduce</option>
+      <option value="5">Rebasar indebidamente</option>
+      <option value="6">Uso de drogas</option>
+      <option value="7">Conducir con fatiga</option>
+      <option value="8">No usar el cinturón de seguridad</option>
+      <option value="9">Ninguna de las anteriores</option>
+    </select>
+  </div>
+</div>
+<div class="form-group">
+<label class="col-md-4 control-label" id="Caracteristicas_Avenidas"><strong>Características de las avenidas</strong></label>
+<div class="col-md-6">
+    <select id="basicdetails_brand" class="form-control">
+      <option value="1">Circulación en doble sentido</option>
+      <option value="2">Carencia de señalamientos</option>
+      <option value="3">Obstáculos que impiden la visibilidad</option>
+      <option value="4">Presencia de camellón central</option>
+      <option value="5">Mal estado del pavimento</option>
+      <option value="6">Ninguna de las anteriores</option>
+    </select>
+  </div>
+</div>
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" id=""><strong>Debidas al peatón</strong></label>
+  <div class="col-md-4">
+    <select id="basicdetails_category" name="basicdetails_category" class="form-control">
+      <option value="1">Imprudencia</option>
+      <option value="2">Estado de ebriedad</option>
+      <option value="3">Descuido</option>
+      <option value="4">Ninguna de las anteriores</option>
+    </select>
+  </div>
+</div>
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="basicdetails_agency"><strong>Situaciones y características desfavorables en la carretera</strong></label>
+  <div class="col-md-6">
+    <select id="basicdetails_agency" name="basicdetails_agency" class="form-control">
+      <option value="1">Invasión o cruce de ganado
+      u otros animales</option>
+      <option value="2">Vehículos que se detienen
+      en el acotamiento</option>
+      <option value="3">Falta de señales</option>
+      <option value="4">Ninguna de las anteriores</option>
+    </select>
+  </div>
+</div>
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="basicdetails_category"><strong>Desperfectos de los vehículos</strong></label>
+  <div class="col-md-6">
+    <select id="basicdetails_category" name="basicdetails_category" class="form-control">
+      <option value="1">Ponchadura de llantas</option>
+      <option value="2">Falta de frenos</option>
+      <option value="3">Descompostura de la dirección</option>
+      <option value="4">Falla de luces delanteras</option>
+      <option value="5">Ruptura de un eje</option>
+      <option value="6">Incendio del vehículo</option>
+      <option value="7">Ninguna de las anteriores</option>
+    </select>
+  </div>
+</div>
+<!-- Select Basic -->
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="basicdetails_category"><strong>Condiciones ambientales poco favorables</strong></label>
+  <div class="col-md-4">
+    <select id="basicdetails_category" name="basicdetails_category" class="form-control">
+      <option value="1">Lluvia</option>
+      <option value="2">Neblina</option>
+      <option value="3">El sol cuando pega de frente
+      y deslumbra</option>
+      <option value="4">Ninguna de las anteriores</option>
+    </select>
+  </div>
+</div>
+<!-- Placa -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="basicdetails_caption"><strong>Placa del vehículo</strong></label>  
+  <div class="col-md-3">
+  <input id="txtPlaca" name="basicdetails_caption" type="text" placeholder="Indrese placa" class="form-control input-md" style="text-transform:uppercase;">
+  </div>
+</div>
+
+<!-- Conductor-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="basicdetails_duration"><strong>Nombre del conductor</strong></label>  
+  <div class="col-md-4">
+  <input id="txtConductor" name="basicdetails_duration" type="text" placeholder="Indgrese nombre" class="form-control input-md"> 
+  </div>
+</div>
+<!-- Select Tipo Vehiculo -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="basicdetails_language"><strong>Tipo vehículo</strong></label>
+  <div class="col-md-4">
+    <select id="vehiculeType" name="basicdetails_language" class="form-control">
+      <option value="1">Turbo</option>
+      <option value="2">Camión Sencillo</option>
+      <option value="3">Doble Troque</option>
+      <option value="4">Cuatro Manos</option>
+      <option value="5">Mini mula</option>
+      <option value="6">Tractomula 2 Troques</option>
+      <option value="7">Tractomula 3 Troques</option>
+      <option value="7">Otro</option>
+    </select>
+  </div>
+</div>
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="basicdetails_quality"><strong>Hubo heridos</strong></label>
+  <div class="col-md-4">
+    <select id="Heridos" name="basicdetails_quality" class="form-control">
+      <option value="1">Si</option>
+      <option value="2">No</option>
+    </select>
+  </div>
+</div>
+<!-- Muertos -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="metadata_subcategory"><strong>Hubo muertos</strong></label>
+  <div class="col-md-4">
+    <select id="Muertos" name="metadata_subcategory" class="form-control">
+      <option value="1">Si</option>
+      <option value="2">No</option>
+    </select>
+  </div>
+</div>
+<!-- Testimonio -->
+<div>
+    <div class="form-group">
+       <label class="col-md-4 control-label" for="metadata_comentarios"><strong>Testimonio del implicado</strong></label> 
+        <textarea class="form-control" placeholder="Testimonio" rows="5" required id="testimonio"></textarea>
+    </div>
+</div>
+<!-- Fotos -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="upload_fileselection"><strong>Fotos del accidente</strong></label>
+  <div class="col-md-4">
+    <input id="fotos" name="upload_fileselection" class="input-file" type="file">
+  </div>
+</div>
+<!-- Botones -->
+<div class="form-group">
+  <div class="col-md-2">
+    <input data-dismiss="modal" type="button" class="btn btn-danger" id="btnCancel" value="CANCELAR">
+  </div>
+  <div class="col-md-2">
+    <input type="submit" id="btnAction" class="btn btn-primary" onclick="reportar()" value="GUARDAR">
+  </div>
+</div>
+
+<!--<div class="modal-footer row">
+  <div class="col-2">
+    <input type="button" class="btn btn-danger" value="CANCELAR">
+      <div class="col-2">
+    <input data-dismiss="modal" type="button" class="btn btn-primary" value="GUARDAR">
+  </div>
+  </div>-->
+
+</div>
+</div>
+</form>
+			</div>
+    	</div>
+  	</div>
+</div>
+</body>
+</html>

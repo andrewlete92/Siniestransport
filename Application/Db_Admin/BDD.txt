@@ -1,0 +1,113 @@
+CREATE TABLE tbl_Users(idUser INT AUTO_INCREMENT PRIMARY KEY, Name VARCHAR (100), LastName VARCHAR (100),
+	     	   User VARCHAR(100), Pass VARCHAR(50),UserType VARCHAR(20));
+INSERT INTO tbl_users (Name, LastName, User, Pass, UserType)
+VALUES
+('Andres','Angulo','andres.angulo',1234,'Admin'),
+('Andres','Lopez','andres.lopez',1234,'User');
+
+CREATE TABLE tblReportes(
+idReporte INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+idCliente INT FOREIGN KEY REFERENCES tblClientes(idCliente),
+Usuario NVARCHAR(30) NOT NULL,
+Placa NVARCHAR(10) NOT NULL,
+Fecha DATE NOT NULL,
+TipoVehiculo INT,
+)
+
+CREATE TABLE tblTipoVehiculo (
+idTipo INT PRIMARY KEY AUTO_INCREMENT,
+Tipo VARCHAR (100)
+);
+
+INSERT INTO tblTipoVehiculo (Tipo)
+VALUES
+('Turbo'),
+('Camión Sencillo'),
+('Doble Troque'),
+('Cuatro Manos'),
+('Mini mula'),
+('Tractomula 2 Troques'),
+('Tractomula 3 Troques'),
+('Otro')
+
+CREATE TABLE tblCondi_Ambientales(
+idCondicion INT PRIMARY KEY AUTO_INCREMENT,
+Nombre VARCHAR(200)
+);
+
+INSERT INTO tblCondi_Ambientales (Nombre)
+VALUES
+('Lluvia'),
+('Neblina'),
+('El sol cuando pega de frente y deslumbra'),
+('Ninguna de las anteriores')
+
+CREATE TABLE tblDesperfectos (
+idDesperfecto INT PRIMARY KEY AUTO_INCREMENT,
+Nombre VARCHAR(200)
+);
+
+INSERT INTO tblDesperfectos (Nombre)
+VALUES
+('Ponchadura de llantas'),
+('Falta de frenos'),
+('Descompostura de la dirección'),
+('Falla de luces delanteras'),
+('Ruptura de un eje'),
+('Incendio del vehículo'),
+('Ninguna de las anteriores')
+
+CREATE TABLE tblSituacionesCarreteras (
+idSitCarretera INT PRIMARY KEY AUTO_INCREMENT,
+Nombre VARCHAR(200)
+);
+
+INSERT INTO tblSituacionesCarreteras (Nombre)
+VALUES
+('Invasión o cruce de ganado u otros animales'),
+('Vehículos que se detienen en el acotamiento'),
+('Falta de señales'),
+('Ninguna de las anteriores')
+
+CREATE TABLE tblCausa_Peaton (
+idCausa_Peaton INT PRIMARY KEY AUTO_INCREMENT,
+Nombre VARCHAR(200)
+);
+
+INSERT INTO tblCausa_Peaton (Nombre)
+VALUES
+('Imprudencia'),
+('Estado de ebriedad'),
+('Descuido'),
+('Ninguna de las anteriores')
+
+CREATE TABLE tblCaracteristicas_Avenidas (
+idCaract_Avenidas INT PRIMARY KEY AUTO_INCREMENT,
+Nombre VARCHAR(200)
+);
+
+INSERT INTO tblCaracteristicas_Avenidas (Nombre)
+VALUES
+('Circulación en doble sentido'),
+('Carencia de señalamientos'),
+('Obstáculos que impiden la visibilidad'),
+('Presencia de camellón central'),
+('Mal estado del pavimento'),
+('Ninguna de las anteriores')
+
+CREATE TABLE tblCausa_Conductor (
+idCausa_Conductor INT PRIMARY KEY AUTO_INCREMENT,
+Nombre VARCHAR(200)
+);
+
+INSERT INTO tblCausa_Conductor (Nombre)
+VALUES
+('Exceso de velocidad'),
+('Circular en sentido contrario'),
+('Inexperiencia en el manejo'),
+('Micro sueño mientras conduce'),
+('Rebasar indebidamente'),
+('Uso de drogas'),
+('Conducir con fatiga'),
+('No usar el cinturón de seguridad'),
+('Ninguna de las anteriores')
