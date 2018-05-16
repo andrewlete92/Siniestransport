@@ -1,18 +1,38 @@
 CREATE TABLE tbl_Users(idUser INT AUTO_INCREMENT PRIMARY KEY, Name VARCHAR (100), LastName VARCHAR (100),
-	     	   User VARCHAR(100), Pass VARCHAR(50),UserType VARCHAR(20));
-INSERT INTO tbl_users (Name, LastName, User, Pass, UserType)
+	     	   User VARCHAR(100), Pass VARCHAR(50), idCliente INT,UserType VARCHAR(20));
+INSERT INTO tbl_users (Name, LastName, User, Pass, idcliente, UserType)
 VALUES
-('Andres','Angulo','andres.angulo',1234,'Admin'),
-('Andres','Lopez','andres.lopez',1234,'User');
+('Andres','Angulo','andres.angulo',1234, 111,'Admin'),
+('Andres','Lopez','andres.lopez',1234,111,'User');
 
-CREATE TABLE tblReportes(
-idReporte INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-idCliente INT FOREIGN KEY REFERENCES tblClientes(idCliente),
-Usuario NVARCHAR(30) NOT NULL,
-Placa NVARCHAR(10) NOT NULL,
-Fecha DATE NOT NULL,
-TipoVehiculo INT,
-)
+CREATE TABLE tblClientes(
+idCliente INT PRIMARY KEY NOT NULL,
+Nombre VARCHAR(50) NOT NULL,
+Nit_CC INT NOT NULL,
+Correo NVARCHAR(30) NOT NULL,
+Telefono VARCHAR(20) NOT NULL,
+Direccion NVARCHAR(20) NOT NULL,
+Ciudad VARCHAR(50) NOT NULL,
+Departamento VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE tblUsuarios(
+idUsuario INT PRIMARY KEY NOT NULL,
+Nombre NVARCHAR(50) NOT NULL,
+Clave NVARCHAR(20) NOT NULL,
+Comentarios NVARCHAR(500),
+idCliente INT FOREIGN KEY REFERENCES tblClientes(idCliente)
+);
+
+CREATE TABLE tblCiudades(
+idCiudad int PRIMARY KEY NOT NULL,
+NomCiudad NVARCHAR(30) NOT NULL
+);
+
+CREATE TABLE tblDepartamentos(
+idDepto INT PRIMARY KEY NOT NULL,
+NomDepto NVARCHAR(30) NOT NULL
+);
 
 CREATE TABLE tblTipoVehiculo (
 idTipo INT PRIMARY KEY AUTO_INCREMENT,
@@ -111,3 +131,32 @@ VALUES
 ('Conducir con fatiga'),
 ('No usar el cinturón de seguridad'),
 ('Ninguna de las anteriores')
+
+CREATE TABLE tblReportes(
+idReporte INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+idCliente INT,
+Usuario VARCHAR(30) NOT NULL,
+Placa VARCHAR(10) NOT NULL,
+Fecha DATE NOT NULL,
+TipoVehiculo INT,
+idCondicion INT,
+idDesperfecto INT,
+idSitCarretera INT,
+idCaract_Avenidas INT,
+idCausa_Peaton INT,
+idCausa_Conductor INT,
+Conductor VARCHAR(200),
+Testimonio VARCHAR(1000)
+)
+
+CREATE TABLE tblLicencias(
+id INT AUTO_INCREMENT PRIMARY KEY,
+Licencia VARCHAR(50),
+idCliente INT
+);
+
+INSERT INTO tblLicencias (Licencia, IdCliente)
+VALUES
+('ABCD098',111),
+('ABCD123',111)
+

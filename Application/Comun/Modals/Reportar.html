@@ -19,7 +19,7 @@
 <form class="form-horizontal" id="formReport">
 <!-- Select Basic -->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="basicdetails_advertiser"><strong>Debidas al conductor</strong></label>
+  <label class="col-md-4 control-label"><strong>Debidas al conductor</strong></label>
   <div class="col-md-4">
     <select id="CausaConductor" name="basicdetails_advertiser" class="form-control">
       <option value="1">Exceso de velocidad</option>
@@ -35,9 +35,9 @@
   </div>
 </div>
 <div class="form-group">
-<label class="col-md-4 control-label" id="Caracteristicas_Avenidas"><strong>Características de las avenidas</strong></label>
+<label class="col-md-4 control-label"><strong>Características de las avenidas</strong></label>
 <div class="col-md-6">
-    <select id="basicdetails_brand" class="form-control">
+    <select id="C_Avenidas" class="form-control">
       <option value="1">Circulación en doble sentido</option>
       <option value="2">Carencia de señalamientos</option>
       <option value="3">Obstáculos que impiden la visibilidad</option>
@@ -49,9 +49,9 @@
 </div>
 <!-- Select Basic -->
 <div class="form-group">
-  <label class="col-md-4 control-label" id=""><strong>Debidas al peatón</strong></label>
+  <label class="col-md-4 control-label"><strong>Debidas al peatón</strong></label>
   <div class="col-md-4">
-    <select id="basicdetails_category" name="basicdetails_category" class="form-control">
+    <select id="CausaPeaton" name="basicdetails_category" class="form-control">
       <option value="1">Imprudencia</option>
       <option value="2">Estado de ebriedad</option>
       <option value="3">Descuido</option>
@@ -61,9 +61,9 @@
 </div>
 <!-- Select Basic -->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="basicdetails_agency"><strong>Situaciones y características desfavorables en la carretera</strong></label>
+  <label class="col-md-4 control-label"><strong>Situaciones y características desfavorables en la carretera</strong></label>
   <div class="col-md-6">
-    <select id="basicdetails_agency" name="basicdetails_agency" class="form-control">
+    <select id="SCarreteras" name="basicdetails_agency" class="form-control">
       <option value="1">Invasión o cruce de ganado
       u otros animales</option>
       <option value="2">Vehículos que se detienen
@@ -75,9 +75,9 @@
 </div>
 <!-- Select Basic -->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="basicdetails_category"><strong>Desperfectos de los vehículos</strong></label>
+  <label class="col-md-4 control-label" ><strong>Desperfectos de los vehículos</strong></label>
   <div class="col-md-6">
-    <select id="basicdetails_category" name="basicdetails_category" class="form-control">
+    <select id="Desperfectos" class="form-control">
       <option value="1">Ponchadura de llantas</option>
       <option value="2">Falta de frenos</option>
       <option value="3">Descompostura de la dirección</option>
@@ -89,11 +89,10 @@
   </div>
 </div>
 <!-- Select Basic -->
-
 <div class="form-group">
-  <label class="col-md-4 control-label" for="basicdetails_category"><strong>Condiciones ambientales poco favorables</strong></label>
+  <label class="col-md-4 control-label"><strong>Condiciones ambientales poco favorables</strong></label>
   <div class="col-md-4">
-    <select id="basicdetails_category" name="basicdetails_category" class="form-control">
+    <select id="CondiAmbientales" name="basicdetails_category" class="form-control">
       <option value="1">Lluvia</option>
       <option value="2">Neblina</option>
       <option value="3">El sol cuando pega de frente
@@ -104,24 +103,24 @@
 </div>
 <!-- Placa -->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="basicdetails_caption"><strong>Placa del vehículo</strong></label>  
+  <label class="col-md-4 control-label"><strong>Placa del vehículo</strong></label>  
   <div class="col-md-3">
-  <input id="txtPlaca" name="basicdetails_caption" type="text" placeholder="Indrese placa" class="form-control input-md" style="text-transform:uppercase;">
+  <input id="Placa" name="Placa" type="text" placeholder="Indrese placa" class="form-control input-md" style="text-transform:uppercase;">
   </div>
 </div>
 
 <!-- Conductor-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="basicdetails_duration"><strong>Nombre del conductor</strong></label>  
+  <label class="col-md-4 control-label"><strong>Nombre del conductor</strong></label>  
   <div class="col-md-4">
-  <input id="txtConductor" name="basicdetails_duration" type="text" placeholder="Indgrese nombre" class="form-control input-md"> 
+  <input id="Conductor" name="basicdetails_duration" type="text" placeholder="Indgrese nombre" class="form-control input-md"> 
   </div>
 </div>
 <!-- Select Tipo Vehiculo -->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="basicdetails_language"><strong>Tipo vehículo</strong></label>
+  <label class="col-md-4 control-label"><strong>Tipo vehículo</strong></label>
   <div class="col-md-4">
-    <select id="vehiculeType" name="basicdetails_language" class="form-control">
+    <select id="TipoVehiculo" name="basicdetails_language" class="form-control">
       <option value="1">Turbo</option>
       <option value="2">Camión Sencillo</option>
       <option value="3">Doble Troque</option>
@@ -135,7 +134,7 @@
 </div>
 <!-- Select Basic -->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="basicdetails_quality"><strong>Hubo heridos</strong></label>
+  <label class="col-md-4 control-label"><strong>Hubo heridos</strong></label>
   <div class="col-md-4">
     <select id="Heridos" name="basicdetails_quality" class="form-control">
       <option value="1">Si</option>
@@ -145,7 +144,7 @@
 </div>
 <!-- Muertos -->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="metadata_subcategory"><strong>Hubo muertos</strong></label>
+  <label class="col-md-4 control-label"><strong>Hubo muertos</strong></label>
   <div class="col-md-4">
     <select id="Muertos" name="metadata_subcategory" class="form-control">
       <option value="1">Si</option>
@@ -156,13 +155,13 @@
 <!-- Testimonio -->
 <div>
     <div class="form-group">
-       <label class="col-md-4 control-label" for="metadata_comentarios"><strong>Testimonio del implicado</strong></label> 
+       <label class="col-md-4 control-label" id="Testimonio"><strong>Testimonio del implicado</strong></label> 
         <textarea class="form-control" placeholder="Testimonio" rows="5" required id="testimonio"></textarea>
     </div>
 </div>
 <!-- Fotos -->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="upload_fileselection"><strong>Fotos del accidente</strong></label>
+  <label class="col-md-4 control-label"><strong>Fotos del accidente</strong></label>
   <div class="col-md-4">
     <input id="fotos" name="upload_fileselection" class="input-file" type="file">
   </div>
@@ -173,8 +172,11 @@
     <input data-dismiss="modal" type="button" class="btn btn-danger" id="btnCancel" value="CANCELAR">
   </div>
   <div class="col-md-2">
-    <input type="submit" id="btnAction" class="btn btn-primary" onclick="reportar()" value="GUARDAR">
+    <input type="submit" id="btnAction" class="btn btn-primary" value="GUARDAR">
   </div>
+</div>
+<div id="modal" role="dialog">
+  
 </div>
 
 <!--<div class="modal-footer row">
