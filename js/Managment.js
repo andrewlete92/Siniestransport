@@ -1,20 +1,26 @@
 $(document).ready(function()
 {
-    $(".submenu").on("click", function(event)
-    {
-        event.preventDefault();            
-       //Cargamos el contenido del enlace
-        $('#content').load(this.href);
-    });
-    $("#report").on("click", function(event){
-    	event.preventDefault();
-    	$("#modal").load('../Comun/Modals/Reportar.html');
-        setTimeout(function(){
-        $(".modalpopup").modal();
-        },500);    	
-    })
+   cargar();
 });
 
-$('#ModalRegistro').on('submit',".form-horizontal",function(){
-    alert("Prueba OK");
+function cargar(){
+    $('#slide').load('../Comun/Slides.html');
+}
+
+jQuery(document).on('click','.submenu',function(event)
+{
+    event.preventDefault();
+    $('#slide').attr('hidden', 'true');            
+    $('#content').load(this.href);
+
+});
+
+jQuery(document).on('click','#report',function(event)
+{
+//$("#report").on("click", function(event){
+    event.preventDefault();
+    $("#modal").load('../Comun/Modals/Reportar.html');
+    setTimeout(function(){
+    $(".modalpopup").modal();
+    },500);     
 })

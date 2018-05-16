@@ -145,6 +145,8 @@ idSitCarretera INT,
 idCaract_Avenidas INT,
 idCausa_Peaton INT,
 idCausa_Conductor INT,
+Heridos INT,
+Muertos INT,
 Conductor VARCHAR(200),
 Testimonio VARCHAR(1000)
 )
@@ -160,3 +162,17 @@ VALUES
 ('ABCD098',111),
 ('ABCD123',111)
 
+CREATE VIEW vw_Incidentes
+AS
+SELECT r.Placa, tv.Tipo AS TipoVehiculo,r.Conductor, r.Fecha, ca.Nombre as CondicionAmbiental, d.Nombre as Desperfecto, sc.Nombre AS SituacionesCarreteras, cav.Nombre AS CaracteristicaAvenida, cp.Nombre AS CausaPeaton, cc.Nombre AS CausaConductor,
+CASE WHEN Heridos = 1 THEN 'SI' ELSE 'NO' END As Heridos,
+CASE WHEN Muertos = 1 THEN 'SI' ELSE 'NO' END As Muertos,
+r.Testimonio
+FROM tblreportes r
+INNER JOIN tbltipovehiculo tv ON r.TipoVehiculo = tv.idTipo
+INNER JOIN tblcondi_ambientales ca ON r.idCondicion = ca.idCondicion
+INNER JOIN tbldesperfectos d ON r.idDesperfecto = d.idDesperfecto
+INNER JOIN tblsituacionescarreteras sc ON r.idSitCarretera = sc.idSitCarretera
+INNER JOIN tblcaracteristicas_avenidas cav ON r.idCaract_Avenidas = cav.idCaract_Avenidas
+INNER JOIN tblcausa_peaton cp ON r.idCausa_Peaton = cp.idCausa_Peaton
+INNER JOIN tblcausa_conductor cc ON r.idCausa_Conductor = cc.idCausa_Conductor

@@ -25,20 +25,20 @@
 </nav>
 
 <section>
-	<form action="Managment.html" method="POST">
+	<form action="" id="formRegistro">
 		<div class="container" style="margin: 10px;padding: 10px">
 		<div class="row">
 			<div class="col-lg-2">
 				<h4>Nombre</h4>
 			</div>
 			<div class="col">
-				<h4><input type="text" required="true"></h4>
+				<h4><input type="text" id="name" name="name" placeholder="Nombre" required="true"></h4>
 			</div>
 			<div class="col-lg-2">
 				<h4>Apellido</h4>
 			</div>
 			<div class="col">
-				<h4><input type="text" required="true"></h4>
+				<h4><input type="text" id="apellido" name="apellido" placeholder="Apellido" required="true"></h4>
 			</div>
 		</div>
 		<div class="row">
@@ -46,13 +46,13 @@
 				<h4>Email</h4>
 			</div>
 			<div class="col">
-				<h4><input type="email" required="true" placeholder="Ingrese Email"></h4>
+				<h4><input type="email" id="email" name="email" required="true" placeholder="Ingrese Email"></h4>
 			</div>
 			<div class="col-lg-2">
 				<h4>Contraseña</h4>
 			</div>
 			<div class="col">
-				<h4><input type="password" required="true" placeholder="Contraseña"></h4>
+				<h4><input type="password" id="pass" name="pass" required="true" placeholder="Contraseña"></h4>
 			</div>
 		</div>
 		<div class="row">
@@ -60,13 +60,13 @@
 				<h4>Confirmar Email</h4>
 			</div>
 			<div class="col">
-				<h4><input type="mail" required="true"></h4>
+				<h4><input type="mail" placeholder="Confirmar Email" name="email2" id="email2" required="true"></h4>
 			</div>
 			<div class="col-lg-2">
 				<h4>Confirmar Contraseña</h4>
 			</div>
 			<div class="col">
-				<h4><input type="password" required="true"></h4>
+				<h4><input type="password" name="pass2" id="pass2" placeholder="Confirmar Contraseña" required="true"></h4>
 			</div>
 		</div>
 		<div class="row">
@@ -74,21 +74,23 @@
 				<h4>Organización</h4>
 			</div>
 			<div class="col">
-				<h4><input type="mail" required="true"></h4>
+				<h4><input type="text" id="empresa" name="empresa" placeholder="Organización" required="true"></h4>
 			</div>
 			<div class="col-lg-2">
 				<h4>Código Validación</h4>
 			</div>
 			<div class="col">
-				<h4><input type="number" required="true"></h4>
+				<h4><input type="number" id="nvalidacion" name="nvalidacion" placeholder="Código" required="true"></h4>
 			</div>
 		</div>
 		</div>
 		<div class="row" style="margin: 20px">
-			<button class="btn btn-success">REGISTRARSE</button>
+			<input type="submit" id="btnRegistrarse" value="REGISTRASE" class="btn btn-success">
 		</div>
 	</form>
-
+<div id="ModalAlert" role="dialog">
+	
+</div>
 </section>
 
 <footer>
