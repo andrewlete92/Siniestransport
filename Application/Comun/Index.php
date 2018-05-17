@@ -50,7 +50,7 @@
       			<a class="nav-link" href="Libros.php">Portafolio</a>
     		</li>
     		<li class="nav-item">
-      			<a class="nav-link" href="Editrial-php">Contáctenos</a>
+      			<a class="nav-link" href="Contactenos.html">Contáctenos</a>
     		</li>
   		</ul>
 	</nav>

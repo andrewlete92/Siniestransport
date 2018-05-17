@@ -80,7 +80,7 @@
 				<h4>Código Validación</h4>
 			</div>
 			<div class="col">
-				<h4><input type="number" id="nvalidacion" name="nvalidacion" placeholder="Código" required="true"></h4>
+				<h4><input type="text" id="nvalidacion" name="nvalidacion" placeholder="Código" required="true"></h4>
 			</div>
 		</div>
 		</div>
